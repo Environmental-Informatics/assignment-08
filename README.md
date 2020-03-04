@@ -1,14 +1,14 @@
 # Environmental Informatics
 
-## Assignment 07 - Graphical Analysis with Python
+## Assignment 08 - Time Series Analysis with Pandas
 
 ### Lab Objectives
 
 On completion of this lab, students will be able to:
 
-1. Use pandas DataFrames to conduct a graphical analysis of a dataset.
-2. Generate a variety of figures as part of a graphical analysis of a new dataset.
-3. Embed those figures into a test document, and write descriptive captions.
+1. Use Time and Date functions with pandas DataFrames to conduct time series analysis of a dataset.
+2. 
+3. 
 
 ### Reading Assignment
 
