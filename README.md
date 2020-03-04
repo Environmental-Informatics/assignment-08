@@ -7,8 +7,8 @@
 On completion of this lab, students will be able to:
 
 1. Use Time and Date functions with pandas DataFrames to conduct time series analysis of a dataset.
-2. 
-3. 
+2. Import a data file into a Pandas DataFrame that uses Datetime as the index.
+3. Use Pandas Datetime methods to summarize time series data.
 
 ### Reading Assignment
 
@@ -39,9 +39,9 @@ Data Analysis with Open Source Tools:
      - Use Columns 3 and 4 for a single Datetime element.
      - Use Column 6 (discharge in cubic feet per second) for the value.
      - For this process, the following additional information may prove useful:
-       - The Pandas documentation on the (read_table)[http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html] DataFrame method.
-       - More information can also be found at the (IO Tools page)[http://pandas.pydata.org/pandas-docs/stable/io.html], in particular help on how to get the read function to parse the date for you automatically can be found (here)[http://pandas.pydata.org/pandas-docs/stable/io.html#datetime-handling].
-       - Information on how to get read_tables to handle variable white space as a separator can be found at this (discussion page)[http://stackoverflow.com/questions/12021730/can-pandas-handle-variable-length-whitespace-as-column-delimeters].
+       - The Pandas documentation on the [read_table](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html) DataFrame method.
+       - More information can also be found at the [IO Tools page](http://pandas.pydata.org/pandas-docs/stable/io.html), in particular help on how to get the read function to parse the date for you automatically can be found [here](http://pandas.pydata.org/pandas-docs/stable/io.html#datetime-handling).
+       - Information on how to get read_tables to handle variable white space as a separator can be found at this [discussion page](http://stackoverflow.com/questions/12021730/can-pandas-handle-variable-length-whitespace-as-column-delimeters).
        - Also note that all of this does not have to all be done in a single line statement.  You may find it easier to import the data in a more raw format, and then work it into a usable final format.  I find this approach useful when datafile quality is suspect, as it provides more options to assess problems and catch errors.  The file I have given you is pretty clean, so not necessarily representative of the types of data you will find in real life. 
    - Create a plot of daily average streamflow for the period of record, written to a PDF or PS file.
    - Using the daily average flow data, identify and plot the 10 days with highest flow, written to a PDF or PS file.  Use symbols to represent the data on the same time axis used for the full daily flow record.
