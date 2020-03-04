@@ -22,34 +22,32 @@ Data Analysis with Open Source Tools:
 
 2. Next, complete the tutorial [Time Series Analysis with Pandas](http://earthpy.org/pandas-basics.html), but include all of the tutorial code in a Python program called **PandasDatesDemo.py** that is included in this repository.
 
-(15 pts) Complete the tutorial Time series analysis with Pandas, with the following modifications:
-You can copy commands from the browser using  -  , and paste them into spyder by clicking (not rolling) the middle button.  If you accidentally roll the middle button instead of clicking it, select another window (a Microsoft window, not another X11 window) to get out of scroll mode for X-windows.
-The "set_printoptions()" function does not appear to work with the current version of pandas.
-Do not set your graphics to inline(see "ln[7]:"),graphics are already prepared in the spyder interface.
-The !wget command will download the data file from within the console in spyder, but can also be run directly from the Linux prompt (drop the "!" from the start of the command, this is telling the Python interpretor that the command should be run at the Linux shell and not interpreted as a Python statement).
-If you started spyder without a file, then it will default to using your home directory as its working directory.  So when you download the data file from the Python prompt it will be written to your home directory, not the new course directory.
-From the Linux prompt, use "head" and "tail" to determine the start and end dates for your file (the tutorial was written in 2013, but the data file continues to be updated).  What dates should you use to define the correct record length?
-The length of record for the AO and NAO files may not be the same, despite what the tutorial document says.  If they are not the same length, what happens when they are combined into a single DataFrame?
-Submit the following plots for evaluation (5 pts each plot): 
-(5 pts) Daily Atlantic Oscillation (AO) plot (Out [23]:)
-(5 pts) Annual median values for AO (Out [48]:)
-(5 pts) Rolling mean for both AO and NAO (Out [52]:)
-Download the attached file, which is daily discharge for the Wabash River at the Lafayette, Indiana gauge from March 17, 2015 through March 24, 2016.
-(35 pts) Write a Python script that will do the following:
-(10 pts) Read the contents of the file into a Pandas series using Columns 3 and 4 for a single Date-Time element, and Column 6 (discharge in cubic feet per second) for the value.
-The Pandas documentation on the read_table function will be helpful.
-More information can also be found at the IO Tools page, in particular help on how to get the read function to parse the date for you automatically can be found here.
-Information on how to get read_tables to handle variable white space as a separator can be found at this discussion page.
-This does not have to all be done in a single line, you may find it easier to import the data in a more raw format, and then work it into a usable final format.
-(5 pts) Create a plot of daily average streamflow for the period of record, written to a PDF or PS file.
-(5pts) Using the daily average flow data, identify and plot the 10 days with highest flow, written to a PDF or PS file.  Use symbols to represent the data on the same time axis used for the full daily flow record.
-(5 pts) Create a plot of monthly average streamflow for the period of record, written to a PDF or PS file.
-(5 pts) Submit all input and output files.
-(5 pts) Submit a well documented script that works with the provided files.
-Bundle all files into a directory and submit through Blackboard.
+   - The "set_printoptions()" function does not appear to work with the current version of pandas.
+   - Do not set your graphics to inline (see "ln[7]:"), graphics are already prepared in the spyder interface.
+   - The `!wget` command will download the data file from within the console in spyder, but can also be run directly from the Linux prompt (drop the "!" from the start of the command, this is telling the Python interpretor that the command should be run at the Linux shell and not interpreted as a Python statement).
+   - What dates should you use to define the correct record length?  From the Linux prompt, use "head" and "tail" to determine the start and end dates for your data file (the tutorial was written in 2013, but the data file continues to be updated).  
+   - The length of record for the AO and NAO files may not be the same, despite what the tutorial document says.  If they are not the same length, what happens when they are combined into a single DataFrame?
+   - Submit the following plots for evaluation: 
+     - Daily Atlantic Oscillation (AO) plot (Out [23]:)
+     - Annual median values for AO (Out [48]:)
+     - Rolling mean for both AO and NAO (Out [52]:)
+     
+3. Once you have completed the tutorial, use your new skills to write a Python script called **program-08.py** that will do the following. 
 
+   - Read the contents of the file **WabashRiver_DailyDischarge_20150317-20160324.txt** into a Pandas dataframe.
+     - This file contains daily discharge for the Wabash River at the Lafayette, Indiana gauge from March 17, 2015 through March 24, 2016.
+     - Use Columns 3 and 4 for a single Datetime element.
+     - Use Column 6 (discharge in cubic feet per second) for the value.
+     - For this process, the following additional information may prove useful:
+       - The Pandas documentation on the (read_table)[http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html] DataFrame method.
+       - More information can also be found at the (IO Tools page)[http://pandas.pydata.org/pandas-docs/stable/io.html], in particular help on how to get the read function to parse the date for you automatically can be found (here)[http://pandas.pydata.org/pandas-docs/stable/io.html#datetime-handling].
+       - Information on how to get read_tables to handle variable white space as a separator can be found at this (discussion page)[http://stackoverflow.com/questions/12021730/can-pandas-handle-variable-length-whitespace-as-column-delimeters].
+       - Also note that all of this does not have to all be done in a single line statement.  You may find it easier to import the data in a more raw format, and then work it into a usable final format.  I find this approach useful when datafile quality is suspect, as it provides more options to assess problems and catch errors.  The file I have given you is pretty clean, so not necessarily representative of the types of data you will find in real life. 
+   - Create a plot of daily average streamflow for the period of record, written to a PDF or PS file.
+   - Using the daily average flow data, identify and plot the 10 days with highest flow, written to a PDF or PS file.  Use symbols to represent the data on the same time axis used for the full daily flow record.
+   - Create a plot of monthly average streamflow for the period of record, written to a PDF or PS file.
 
-4. Be sure that the script has a complete header comment block, appropriate in-line comments, and runs without intervention.
+4. Be sure that the script has a complete header comment block, appropriate in-line comments, and runs without intervention relative to where the datafile is stored in the repository.
 
 #### What to turn in...
 
@@ -57,35 +55,24 @@ The following should be included in your GitHub repository:
 
 1. A working tutorial solution file called **PandasDatesDemo.py**.
 
-2. The data file downloaded from the [USGS earthquake hazards web site](http://earthquake.usgs.gov/earthquakes/feed/).
+2. The original data file, **WabashRiver_DailyDischarge_20150317-20160324.txt**, provided with the repository.
 
-2. A working program called **program-08.py**.
+3. A working program called **program-08.py**.
 
-5. A metadata file called **Metadata.pdf**:
-   - Use Word or similar word processing program (Open Office, `openoffice.org`, is available on all of the clusters and does many of the same things as Microsoft Office).
-   - Describe the source and format of the input data (not more than half a page),
-   - Describe the types of analysis conducted by your script (not more than half a page),
-   - Import the graphical analysis figures your developed in the previous section, and write a caption that describes the figure and addresses the hints provided for each figure.
-   - Captions should be consecutively numbered.
-   - Convert the Metadata file into a PDF file prior to submission.
-
-7. Put your input file, processing script and metadata file in the assignment repository and push to GitHub to submit.
+4. Put your input file, output files, and processing script in the assignment repository and push to GitHub to submit.
 
 #### Grading Rubric (50 pts Total)
 
 | Question | Description | Score |
 | -------- | ----------- | ----- |
-| 1. |Complete the tutorial Time series analysis with Pandas, with the required modifications | 15 pts |
-| 3. | Submit the following plots for evaluation || 
-| 3.1. | Daily Atlantic Oscillation (AO) plot (Out [23]:) | 5 pts |
-| 3.2 | Annual median values for AO (Out [48]:) | 5 pts |
-| 3.3 | Rolling mean for both AO and NAO (Out [52]:) | 5 pts |
-Download the attached file, which is daily discharge for the Wabash River at the Lafayette, Indiana gauge from March 17, 2015 through March 24, 2016.
-(35 pts) Write a Python script that will do the following:
-(10 pts) Read the contents of the file into a Pandas series using Columns 3 and 4 for a single Date-Time element, and Column 6 (discharge in cubic feet per second) for the value.
-
-(5 pts) Create a plot of daily average streamflow for the period of record, written to a PDF or PS file.
-(5pts) Using the daily average flow data, identify and plot the 10 days with highest flow, written to a PDF or PS file.  Use symbols to represent the data on the same time axis used for the full daily flow record.
-(5 pts) Create a plot of monthly average streamflow for the period of record, written to a PDF or PS file.
-(5 pts) Submit all input and output files.
-(5 pts) Submit a well documented script that works with the provided files.
+| 1. |Complete the tutorial Time series analysis with Pandas, and submit the following for evaluation | (15 pts) |
+| 1.1. | Daily Atlantic Oscillation (AO) plot (Out [23]:) | 5 pts |
+| 1.2. | Annual median values for AO (Out [48]:) | 5 pts |
+| 1.3. | Rolling mean for both AO and NAO (Out [52]:) | 5 pts |
+| 2. | Write a Python script to complete the following analysis | (35 pts) |
+| 2.1. | Read the contents of the file into a Pandas series using Columns 3 and 4 for a single Date-Time element, and Column 6 (discharge in cubic feet per second) for the value. | 10 pts |
+| 2.2. | Create a plot of daily average streamflow for the period of record, written to a PDF or PS file. | 5 pts |
+| 2.3. | Using the daily average flow data, identify and plot the 10 days with highest flow, written to a PDF or PS file.  Use symbols to represent the data on the same time axis used for the full daily flow record. | 5 pts |
+| 2.4. | Create a plot of monthly average streamflow for the period of record, written to a PDF or PS file. | 5 pts |
+| 3. | Submit all input and output files. | 5 pts |
+| 4. | Program has complete header and adequate in-line comments. | 5 pts |
